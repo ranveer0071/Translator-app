@@ -1,12 +1,116 @@
-# React + Vite
+# 🌍 Translator App  
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A **full-stack translation web application** built with **React (Vite)** on the frontend and **Node.js + Express + MongoDB** on the backend.  
+This app allows users to translate text between multiple languages, manage translation history, and authenticate securely.  
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features  
 
-## Expanding the ESLint configuration
+- 🔑 **User Authentication** (Login / Register with JWT)  
+- 🌐 **Text Translation** between multiple languages  
+- 🗂️ **Translation History** stored in MongoDB  
+- 🚀 **Fast Frontend** with React 19 + Vite  
+- 🎉 **Modern UI Enhancements** with Flag Icons & Toast Notifications  
+- 📡 **RESTful APIs** for history & authentication  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+---
+
+## 🛠️ Tech Stack  
+
+### **Frontend**  
+- React 19 (Vite)  
+- React Router DOM  
+- Axios (API calls)  
+- React Toastify  
+- Flag Icons  
+
+### **Backend**  
+- Node.js + Express  
+- MongoDB + Mongoose  
+- dotenv (env management)  
+- CORS  
+
+---
+
+## 📂 Project Structure  
+
+Translator-app/
+│── client/ # React frontend (Vite)
+│ ├── src/
+│ │ ├── App.jsx
+│ │ ├── main.jsx
+│ │ ├── index.css
+│ │ └── components/
+│ └── package.json
+│
+│── server/ # Express backend
+│ ├── routes/
+│ │ ├── auth.js
+│ │ └── history.js
+│ ├── server.js
+│ ├── package.json
+│ └── .env (ignored)
+│
+└── README.md
+
+---
+
+## ⚙️ Installation & Setup  
+
+### **1️⃣ Clone the repo**  
+```bash
+git clone https://github.com/ranveer0071/Translator-app.git
+cd Translator-app
+
+2️⃣ Frontend Setup (React)
+cd client
+npm install
+npm run dev
+
+3️⃣ Backend Setup (Express + MongoDB)
+cd server
+npm install
+npm start
+
+🔑 Environment Variables
+
+Create a .env file in the server/ folder:
+MONGO_URI=your_mongodb_connection_string
+PORT=5000
+JWT_SECRET=your_secret_key
+
+
+📡 API Endpoints
+Authentication
+
+POST /auth/register → Register new user
+
+POST /auth/login → Login user & get token
+
+History
+
+GET /api/history → Get user’s translation history
+
+POST /api/history → Save new translation
+
+🚀 Future Improvements
+
+✅ Deploy backend (Render / Railway / Heroku)
+
+✅ Deploy frontend (Vercel / Netlify)
+
+🌟 Add multiple user roles (Admin / User)
+
+🌟 Add favorites & export history
+
+🤝 Contributing
+
+Pull requests are welcome. For major changes, open an issue first to discuss.
+
+
+
+📜 License
+
+This project is licensed under the MIT License.
+
