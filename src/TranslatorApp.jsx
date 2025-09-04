@@ -162,7 +162,7 @@ const TranslatorApp = () => {
   };
 
   const transcribeAudioFile = async (file) => {
-    const apiKey = '3a832e8c626647faba4fcc0f84749aa9'; // Replace
+    const apiKey = 'apikey here'; // Replace
 
     try {
       const uploadRes = await axios({
@@ -273,7 +273,7 @@ const TranslatorApp = () => {
 
   const downloadAudio = async () => {
     if (!outputText) return toast.warning('No output to download.');
-    const apiKey = '65c820ebae9c4a0cb96e662078b32bc0'; // Replace
+    const apiKey = 'your api key here'; // Replace
 
     try {
       const response = await fetch(
